@@ -1,0 +1,35 @@
+from gpiozero import Motor
+import socket
+
+# Motor setup
+motor_left = Motor(forward=17, backward=18)
+motor_right = Motor(forward=22, backward=23)
+
+# Network setup
+HOST = 'rasp'  # Symbolic name meaning all available interfaces
+PORT = 12345  # Arbitrary non-privileged port
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.bind((HOST, PORT))
+    s.listen(1)
+    print("Waiting for a connection...")
+    conn, addr = s.accept()
+    with conn:
+        print('Connected by', addr)
+        while True:
+            data = conn.recv(1024)
+            if not data:
+                break
+            command = data.decode('utf-8').strip()
+            if command == 'forward':
+                motor_left.forward()
+                motor_right.forward()
+            elif command == 'backward':
+                motor_left.backward()
+                motor_right.backward()
+            elif command == 'left':
+                motor_left.backward()
+                motor_right.forward()
+            elif command == 'right':
+                motor_left.forward()
+                motor_right.backward()
