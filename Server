@@ -6,7 +6,7 @@ motor_left = Motor(forward=17, backward=18)
 motor_right = Motor(forward=22, backward=23)
 
 # Network setup
-HOST = 'rasp'  # Symbolic name meaning all available interfaces
+HOST = '192.168.20.105'  # Symbolic name meaning all available interfaces
 PORT = 12345  # Arbitrary non-privileged port
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
