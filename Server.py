@@ -20,6 +20,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             if not data:
                 break
             command = data.decode('utf-8').strip()
+            print(command)
             if command == 'forward':
                 mdev.move(1000, 1000)  # Adjust values based on your setup
             elif command == 'backward':
