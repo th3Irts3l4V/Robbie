@@ -30,7 +30,7 @@ To get started with Robbie, you'll need a Raspberry Pi 4, the Freenove 3WD Car K
 
 1. **Clone the Repository**: Clone this repository to your Raspberry Pi and client computer.
     ```
-    git clone https://github.com/YourUsername/Robbie.git
+    git clone https://github.com/th3Irts3l4V/Robbie.git
     ```
 2. **Install Dependencies**: Make sure you have all the required libraries installed on both your Raspberry Pi and client computer.
 
@@ -65,7 +65,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - @YourTwitter - email@example.com
 
-Project Link: [https://github.com/YourUsername/Robbie](https://github.com/YourUsername/Robbie)
+Project Link: [https://github.com/th3Irts3l4V/Robbie](https://github.com/th3Irts3l4V/Robbie)
 
 ## Acknowledgments
 
