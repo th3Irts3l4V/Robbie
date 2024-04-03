@@ -5,7 +5,7 @@ from mDev import mDEV  # Make sure this class is accessible; might need to adjus
 mdev = mDEV()
 
 # Network setup
-HOST = '192.168.05.20'  # Symbolic name meaning all available interfaces
+HOST = '192.168.20.105'  # Symbolic name meaning all available interfaces
 PORT = 12345  # Arbitrary non-privileged port
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
