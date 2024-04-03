@@ -1,12 +1,11 @@
-from gpiozero import Motor
 import socket
+from mDev import mDEV  # Make sure this class is accessible; might need to adjust import path
 
-# Motor setup
-motor_left = Motor(forward=17, backward=18)
-motor_right = Motor(forward=22, backward=23)
+# Initialize the mDEV class
+mdev = mDEV()
 
 # Network setup
-HOST = '192.168.20.105'  # Symbolic name meaning all available interfaces
+HOST = ''  # Symbolic name meaning all available interfaces
 PORT = 12345  # Arbitrary non-privileged port
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -22,14 +21,10 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 break
             command = data.decode('utf-8').strip()
             if command == 'forward':
-                motor_left.forward()
-                motor_right.forward()
+                mdev.move(1000, 1000)  # Adjust values based on your setup
             elif command == 'backward':
-                motor_left.backward()
-                motor_right.backward()
+                mdev.move(-1000, -1000)
             elif command == 'left':
-                motor_left.backward()
-                motor_right.forward()
+                mdev.move(-500, 500)
             elif command == 'right':
-                motor_left.forward()
-                motor_right.backward()
+                mdev.move(500, -500)
