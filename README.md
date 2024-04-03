@@ -57,13 +57,9 @@ For a deeper dive into Robbie's architecture, setup instructions, and customizat
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
 ## Contact
 
-Your Name - @YourTwitter - email@example.com
+Christian Valestri - valestrichristian@gmail.com
 
 Project Link: [https://github.com/th3Irts3l4V/Robbie](https://github.com/th3Irts3l4V/Robbie)
 
