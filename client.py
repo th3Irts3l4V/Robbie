@@ -1,7 +1,7 @@
 import socket
 import keyboard
 
-RASPBERRY_PI_IP = '192.168.20.105'  # Change to your Raspberry Pi's IP address
+RASPBERRY_PI_IP = '192.168.80.105'  # Change to your Raspberry Pi's IP address
 PORT = 12345  # The port number used by the server on the Raspberry Pi
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
