@@ -1,11 +1,12 @@
 import socket
 from mDev import mDEV  # Make sure this class is accessible; might need to adjust import path
+import time
 
 # Initialize the mDEV class
 mdev = mDEV()
 
 # Network setup
-HOST = '192.168.80.105'  # Symbolic name meaning all available interfaces
+HOST = '192.168.254.105'  # Symbolic name meaning all available interfaces
 PORT = 12345  # Arbitrary non-privileged port
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -29,3 +30,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 mdev.move(-500, 500)
             elif command == 'right':
                 mdev.move(500, -500)
+            else:
+                mdev.move(0, 0)  # Stop moving if no command is received
